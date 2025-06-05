@@ -1,0 +1,13 @@
+# Ambientes virtuais
+venv/
+__pycache__/
+*.pyc
+
+# Credenciais e arquivos sensíveis
+credentials/
+*.json
+
+# Arquivos de saída/análise
+*.txt
+frames_*/
+audio_tmp.wav
