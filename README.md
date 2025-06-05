@@ -39,7 +39,7 @@ Adicione os arquivos de vídeo na pasta:
 videos/
 ```
 
-Exemplo: `videos/video1biomundo.mp4`
+Exemplo: `videos/video1.mp4`
 
 ### Script principal
 
@@ -51,7 +51,7 @@ Edite o `main.py` para definir o caminho do vídeo e o nome do arquivo de saída
 python main.py
 ```
 
-O resultado será salvo como `video1biomundo_resultado.txt` (ou nome equivalente) na raiz do projeto.
+O resultado será salvo como `video1_resultado.txt` (ou nome equivalente) na raiz do projeto.
 
 ## Estrutura de Pastas
 
@@ -61,12 +61,12 @@ ANALYZER/
 │   └── key.json
 ├── venv/
 ├── videos/
-│   └── video1biomundo.mp4
+│   └── video1.mp4
 ├── main.py
 ├── README.md
 ├── requirements.txt
 ├── .gitignore
-└── video1biomundo_resultado.txt
+└── video1_resultado.txt
 ```
 
 ## Observações
