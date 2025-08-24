@@ -1,19 +1,19 @@
-# Video Analyzer com Google Cloud & Gemini
+# Video Analyzer with Google Cloud & Gemini
 
-Este é um projeto em Python para análise automática de vídeos, gerando um arquivo `.txt` com timestamps, transcrição de áudio (via Faster Whisper) e descrição visual detalhada (via Gemini 2.0 Flash).  
-Indicado para sumarização multimodal de vídeos de reuniões, aulas, entrevistas e outros contextos.
+This is a Python project for automatic video analysis, generating a `.txt` file with timestamps, audio transcription (via Faster Whisper), and detailed visual descriptions (via Gemini 2.0 Flash or compatible models).  
+It is recommended for multimodal summarization of videos such as meetings, lectures, interviews, and more.
 
-## Pré-requisitos
+## Prerequisites
 
-- Conta Google Cloud com acesso ao modelo Gemini 2.0 Flash (ou similar)
-- Chave de conta de serviço (formato JSON)
-- Python 3.8 ou superior
-- ffmpeg instalado no sistema  
+- Google Cloud account with access to the Gemini 2.0 Flash model (or similar)
+- Service Account key (JSON format)
+- Python 3.8 or higher
+- ffmpeg installed on the system  
   - Linux: `sudo apt install ffmpeg`  
   - macOS: `brew install ffmpeg`
-- Dependências Python listadas em `requirements.txt`
+- Python dependencies listed in `requirements.txt`
 
-## Instalação
+## Installation
 
 ```bash
 python3 -m venv venv
@@ -21,39 +21,39 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-## Configuração
+## Configuration
 
-### Chave de serviço
+### Service Key
 
-Coloque o arquivo JSON da sua Service Account em:
+Place your Service Account JSON key file in:
 
 ```
 credentials/key.json
 ```
 
-### Vídeos
+### Videos
 
-Adicione os arquivos de vídeo na pasta:
+Add your video files to the directory:
 
 ```
 videos/
 ```
 
-Exemplo: `videos/video1.mp4`
+Example: `videos/video1.mp4`
 
-### Script principal
+### Main Script
 
-Edite o `main.py` para definir o caminho do vídeo e o nome do arquivo de saída conforme necessário.
+Edit `main.py` to set the video path and output filename as needed.
 
-## Execução
+## Usage
 
 ```bash
 python main.py
 ```
 
-O resultado será salvo como `video1_resultado.txt` (ou nome equivalente) na raiz do projeto.
+The result will be saved as `video1_resultado.txt` (or equivalent filename) in the project root.
 
-## Estrutura de Pastas
+## Folder Structure
 
 ```
 ANALYZER/
@@ -69,15 +69,15 @@ ANALYZER/
 └── video1_resultado.txt
 ```
 
-## Observações
+## Notes
 
-- O tempo de execução pode variar conforme a quota disponível na API Gemini.
-- O parâmetro `interval`, no `main.py`, define a frequência da análise visual (em segundos).
-- A transcrição de áudio é feita localmente com Faster Whisper, sem limitação de tamanho.
-- Arquivos de credenciais e saídas `.txt` estão no `.gitignore` por segurança.
-- Para processar outro vídeo, basta alterar o caminho configurado no script.
+- Execution time may vary depending on your Gemini API quota.
+- The `interval` parameter in `main.py` defines the frequency of visual analysis (in seconds).
+- Audio transcription is performed locally with Faster Whisper, without file size limitations.
+- Credential files and `.txt` output files are included in `.gitignore` for security.
+- To process another video, simply change the configured path in the script.
 
-## Tecnologias
+## Technologies
 
 - Python
 - Google Cloud (Gemini 2.0 Flash)
